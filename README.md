@@ -9,7 +9,7 @@
 - Address
   - **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
 - Site
-  - **< https://2846007397.github.io/hongmengyao.github.io>**
+  - **<https://2846007397.github.io/hongmengyao.github.io/>**
 - [Resume](https://wu-kan.github.io/resume/resume.pdf)
 
 <!-- .slide vertical=true -->
