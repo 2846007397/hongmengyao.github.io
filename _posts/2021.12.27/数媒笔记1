@@ -1,0 +1,176 @@
+---
+title: 数字媒体技术
+layout: category
+permalink: /categories/数字媒体技术/
+taxonomy: 数字媒体技术
+---  
+
+数字媒体技术学习笔记：
+> 1. typora介绍
+>
+> > 1. [typora官网下载](https://typora.io/)
+> > 2. [typora进阶](https://www.bilibili.com/video/BV12T4y1g7se?from=search&seid=1073155979321395137&spm_id_from=333.337.0.0)
+>
+> 1. markdown语法进阶
+>
+> > 1. 代码块
+> > 2. 进阶练习之-流程图
+> >
+> > > 1. 让刚刚的流程图改变顺序，怎么做？
+
+```
+        1. 自上而下
+        2. 自下而上
+        3. 从右到左
+```
+
+> > > 1. 要加入文本one two three，怎么做？
+> > > 2. 要把箭头取消，怎么做？
+
+> > 1. 甘特图
+
+### 1. 代码块
+
+```
+gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+```
+
+------
+
+### 2. 事项清单
+
+待办事项1
+
+-  待办事项2
+
+-  已办事项1
+
+-  
+
+  已办事项2
+
+  -  一般事项2
+  -  已办
+
+------
+
+### 3. 流程图
+
+[markdown流程图详解](https://blog.csdn.net/suoxd123/article/details/84992282)
+
+```
+graph LR
+  A[圣诞节]---B(GO shopping)
+  B--> C{Let me think}
+  C--> D((Laptop))
+  C--> F((iPhone))
+  C--> G((car))
+```
+
+##### 练习：
+
+- 不需要实现颜色
+- 线条指向不需要一摸一样
+- 文本框排列不需要一摸一样
+- 只需要按顺序将课程之间的进阶关系用MD表示即可 ![网新培养方案](https://gitee.com/xzhichao/digital-media-technology/raw/master/week05/WechatIMG435.png)
+
+```
+graph LR
+A[Chrismas] -->B{GO SHOPPING}
+```
+
+------
+
+### 4. 甘特图
+
+```
+gantt
+dateFormat YYYY-MM-DD
+TITLE 产品计划表
+gantt
+dateFormat YYYY-MM-DD
+TITLE 产品计划表
+section 阶段一
+产品原型图: 2021-11-11, 2021-12-20
+section 阶段二
+产品交互界面: 2021-12-21, 2022-01-20
+gantt
+dateFormat YYYY-MM-DD
+TITLE 产品计划表
+section S1
+T1: 2014-01-01, 9d
+section S2
+T2: 2014-01-11, 9d
+section S3
+T3: 2014-01-02, 9d
+gantt
+dateformat HH:mm
+Title 24-Hour Day
+Whole day: done, 00:00, 1440m
+睡觉:crit, sleep2,after 00:00, 450m <--! 00:00-7:30 -->
+起床: get_up,after sleep2, 30m  <--! 7:30-8:00 -->
+通勤(公交车)/早餐: commute1,after get_up, 60m <--! 8:00-9:00 -->
+工作 :active,work1,after commute1,180m <--! 9:00-12:00 -->
+吃饭 /休息 : rest,after work1,90m <--! 12:00-13:30 -->
+工作 :active,work2,after rest,330m <--! 13:30-19:00 -->
+通勤(步行) : commute2,after work2,90m  <--! 19:00-20:30 -->
+学习:crit, study,after commute2,120m <--! 20:30-22:30 -->
+准备睡觉: pre_sleep,after study,30m <--! 22:30-23:00 -->
+睡觉 : crit,sleep1,after pre_sleep,60m <--! 23:00-00:00 -->
+sequenceDiagram
+A->>B: How are you?
+B->>A: Great!
+gantt         
+       dateFormat  YYYY-MM-DD   
+       title 使用mermaid语言定制甘特图
+
+       section 任务1
+       已完成的任务           :done,    des1, 2014-01-06,2014-01-08
+       正在进行的任务               :active,  des2, 2014-01-09, 3d
+       待完成任务1               :         des3, after des2, 5d
+       待完成任务2              :         des4, after des3, 5d
+
+       section 关键任务
+       已完成的关键任务 :   crit, done, 2014-01-06,24h
+       已完成的关键任务2         :crit, done, after des1, 2d
+       正在进行的关键任务             :crit, active, 3d
+       待完成的关键任务        :crit, 5d
+       待完成任务           :2d
+       待完成任务2                      :1d
+
+       section 文档编写
+       描述甘特图语法               :active, a1, after des1, 3d
+       完成甘特图实例1      :after a1  , 20h
+       完成甘特图实例2    :doc1, after a1  , 48h
+graph LR
+A-->B
+```
+
+### 5. 数学公式
+
+```
+E = mc^2
+```
+
+------
+
+文章参考文献：
+
+- [typora官网下载](https://typora.io/) ： https://typora.io/
+- [typora进阶视频](https://www.bilibili.com/video/BV12T4y1g7se?from=search&seid=1073155979321395137&spm_id_from=333.337.0.0) ： https://www.bilibili.com/video/BV12T4y1g7se?from=search&seid=1073155979321395137&spm_id_from=333.337.0.0
+- [markdown流程图详解](https://blog.csdn.net/suoxd123/article/details/84992282) ： https://blog.csdn.net/suoxd123/article/details/84992282
